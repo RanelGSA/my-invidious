@@ -1,25 +1,20 @@
 FROM quay.io/invidious/invidious:latest
 
-# Твой личный Invidious, оптимизированный под РФ 2025
-ENV INVIDIOUS_CONFIG= \
-'db: {\
-  dbname: invidious,\
-  user: kemal,\
-  password: kemal,\
-  host: postgres,\
-  port: 5432\
-},\
-check_tables: true,\
-external_port: 443,\
-https_only: false,\
-domain: null,\
-hmac_key: supersecretlongrandomkey1234567890abcdef1234567890abcdef12345678,\
-force_resolve: ipv4,\
-captcha_enabled: false,\
-registration_enabled: false,\
-login_enabled: false,\
-channel_threads: 10,\
-feed_threads: 10,\
-popular_enabled: false'
+ENV INVIDIOUS_CONFIG="\
+  db:\n\
+    dbname: invidious\n\
+    user: kemal\n\
+    password: kemal\n\
+    host: postgres\n\
+    port: 5432\n\
+  check_tables: true\n\
+  hmac_key: moyasecret2025rfbezvpn1234567890abcdefghijklmnopqrstuvwxyz1234567890\n\
+  force_resolve: ipv4\n\
+  captcha_enabled: false\n\
+  registration_enabled: false\n\
+  login_enabled: false\n\
+  popular_enabled: false\n\
+  statistics_enabled: false\n\
+"
 
 EXPOSE 3000
