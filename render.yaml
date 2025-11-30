@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: invidious
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: invidious-db
+          property: connectionString
+
+databases:
+  - name: invidious-db
+    databaseName: invidious
+    user: kemal
+    plan: starter
