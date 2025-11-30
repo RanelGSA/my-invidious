@@ -12,7 +12,7 @@ ENV INVIDIOUS_CONFIG='{
   "check_tables": true,
   "external_port": 443,
   "https_only": false,
-  "hmac_key": "твой_секретный_ключ_минимум_64_символа_здесь_придумай_сам_например_openssl_rand_hex_32",
+  "hmac_key": "mysecretkeyforinvidious2025superlongrandomstring1234567890abcdef",
   "force_resolve": "ipv4",
   "captcha_enabled": false,
   "registration_enabled": false,
